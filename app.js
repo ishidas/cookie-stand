@@ -1,6 +1,6 @@
 //Hours of Operation on ALL locations
 var hoursOfOperation = ["10am","11am","12pm", "1pm", "2pm","3pm","4pm","5pm","Total"];
-var shops = ["Pike Place","Sea Tac Airport", ];
+
 
 //Pike Place store Hourly Customer, Hourly Cookies TTL, Daily TTL
 var pikePlace = {
@@ -8,6 +8,7 @@ var pikePlace = {
   maxCustPerHr: 88,
   aveCookiesPerCust: 5.2,
   hourlyCookies: [],
+  total: 0,
 
   calculateRandomHrlyCust: function(){
     return Math.floor(Math.random()*(this.maxCustPerHr - this.minCustPerHr +1))+this.minCustPerHr;
@@ -16,15 +17,17 @@ var pikePlace = {
     return Math.ceil(this.calculateRandomHrlyCust() * this.aveCookiesPerCust);
   },
   calculateDailyTtl: function(){
-    var total = 0;
     var pplist = document.getElementById('pikePlaceList');
     for (var i = 0; i < hoursOfOperation.length; i++) {
       this.hourlyCookies.push(this.calculateHourlyTtl());
+      this.total += this.hourlyCookies[i];
       var listItem1 = document.createElement("li");
       listItem1.innerHTML = hoursOfOperation[i]+ ": " + this.hourlyCookies[i]
       pplist.appendChild(listItem1)
     }
-
+      var listItem1 = document.createElement("li");
+      listItem1.innerHTML = "Total: " + this.hourlyCookies[i]
+      pplist.appendChild(this.total)
   }
 };
 
