@@ -1,5 +1,5 @@
 //Hours of Operation on ALL locations
-var hoursOfOperation = ["10am","11am","12pm", "1pm", "2pm","3pm","4pm","5pm"];
+var hoursOfOperation = ["Location","10am","11am","12pm", "1pm", "2pm","3pm","4pm","5pm"];
 var stores = [];
 
 
@@ -40,19 +40,28 @@ function CookieStand(storeLocation, minCustPerHr, maxCustPerHr, aveCookiesPerCus
 };
 
 
-// display = function() {
-//   var table = document.createElement('table');
-//   var row = document.createElement('tr');
-//   for (var i = 0; i < hoursOfOperation.length; i++) {
-//   var header = document.createElement('th');
-//   var data = document.createElement('td');
-//     data.textConent = hoursOfOperation[i];
-//     header.appendChild(data);
-//     row.appendChild(header);
-//     console.log[i];
-//   }
-//   table.appendChild(row);
-
+display = function() {
+  var table = document.createElement('table');
+  console.log(table);
+  var row = document.createElement('tr');
+  console.log(row);
+  var header = document.createElement('th');
+  console.log(header);
+  for (var i = 0; i < hoursOfOperation.length; i++) {
+  var header = document.createElement('th');
+  header.textConent = hoursOfOperation[i];
+  row.appendChild(header);
+  // var tData = document.createElement('td');
+  // console.log(tData);
+  //   tData.textConent = hoursOfOperation[i];
+  //   row.appendChild(tData);
+  //   console.log(tData.textConent);
+  //   table.appendChild(row);
+  //   console.log[i];
+  }
+  table.appendChild(row);
+  document.body.appendChild(table);
+}
 //   for (var i = o; i < this.hourlyCookies.length; i++) {
 //     var row = document.createElement('tr');
 //     var data = document.createElement('td');
@@ -62,7 +71,6 @@ function CookieStand(storeLocation, minCustPerHr, maxCustPerHr, aveCookiesPerCus
 //     }
 //     table.appendChild(row);
 
-//   document.body.appendChild(row);
 // }
 var pikePlace = new CookieStand('Pike Place Market', 17, 88, 5.2);
 var seaTacAirport = new CookieStand('SeaTac Airport', 6, 44, 1.2);
@@ -73,6 +81,7 @@ var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
 // pikePlace.display();
 
 pikePlace.calculateDailyTtl();
+  display();
 
 // //Pike Place store Hourly Customer, Hourly Cookies TTL, Daily TTL
 // var pikePlace = {
