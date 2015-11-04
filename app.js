@@ -1,6 +1,7 @@
 //Hours of Operation on ALL locations
-var hoursOfOperation = ["10am","11am","12pm", "1pm", "2pm","3pm","4pm","5pm","Total"];
+var hoursOfOperation = ["10am","11am","12pm", "1pm", "2pm","3pm","4pm","5pm"];
 var stores = [];
+
 
 function CookieStand(storeLocation, minCustPerHr, maxCustPerHr, aveCookiesPerCust) {
   this.storeLocation = storeLocation;
@@ -26,17 +27,20 @@ function CookieStand(storeLocation, minCustPerHr, maxCustPerHr, aveCookiesPerCus
       console.log(this.total);
       var listItem1 = document.createElement("li");
       listItem1.innerHTML = hoursOfOperation[i]+ ": " + this.hourlyCookies[i]
+      console.log(listItem1.innerHTML);
       pplist.appendChild(listItem1)
+
     };
-      // var listItem1 = document.createElement("li");
-      // listItem1.innerHTML = "Total: " + this.hourlyCookies[i];
-      // pplist.appendChild(this.total);
+      //added on Nov 4 8:02am- got Total number attached to the list.
+      var listItem1Total = document.createElement("li");
+      listItem1Total.innerHTML = "Total: " + pikePlace.total;
+      listItem1.appendChild(listItem1Total);
+      console.log(listItem1Total);
   }
 };
 
 
 // display = function() {
-//   this.calculateHourlyTtl();
 //   var table = document.createElement('table');
 //   var row = document.createElement('tr');
 //   for (var i = 0; i < hoursOfOperation.length; i++) {
