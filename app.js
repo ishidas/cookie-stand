@@ -51,6 +51,9 @@ function CookieStand(storeLocation, minCustPerHr, maxCustPerHr, aveCookiesPerCus
       tableData.innerHTML = this.hourlyCookies[i]; //Adds the hours to the tag/element
       row.appendChild(tableData);
     }
+    var tableData = document.createElement('td');
+    tableData.innerHTML = this.total;
+    row.appendChild(tableData);
   };
 }
 
@@ -74,6 +77,9 @@ displayTable = function() {
     header.innerHTML = hoursOfOperation[i]; //Adds the hours to the tag/element
     row.appendChild(header);
   }
+  var header = document.createElement('th');
+  header.innerHTML = 'Total';
+  row.appendChild(header);
   table.appendChild(row);
   document.body.appendChild(table);
 }
