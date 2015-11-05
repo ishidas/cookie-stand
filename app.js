@@ -99,6 +99,31 @@ southCenterMall.tableRows();
 bellevueSquare.tableRows();
 alki.tableRows();
 
+var FormSubmit = function(event) {
+  event.preventDefault();
+   if (!event.target.storeLocation.value || !event.target.minCustPerHr.value || !event.target.maxCustPerHr.value || !event.target.aveCookiesPerCust.value) {
+    return alert('Fields cannot be empty!');
+   }
+   var shop = event.target.storeLocation.value;
+   var min = event.target.minCustPerHr.value;
+   var max = event.target.maxCustPerHr.value;
+   var avg = Number(event.target.aveCookiesPerCust.value);
+
+   var updateInfo = new CookieStand(shop, min, max, avg);
+   store.push(updateInfo);
+
+   event.target.storeLocation.value = null;
+   event.target.minCustPerHr.value = null;
+   event.target.maxCustPerHr.value = null;
+   event.target.aveCookiesPerCust.value = null;
+
+   updateInfo.displayTable();
+   updateInfo.calculateDailyTtl();
+   updateInfo.tableRows();
+}
+  var form = document.getElementById("tableSpace");
+  console.log(form);
+  form.addEventListner("updatebutton", FormSubmit);
 // //Pike Place store Hourly Customer, Hourly Cookies TTL, Daily TTL
 // var pikePlace = {
 //   minCustPerHr: 17,
