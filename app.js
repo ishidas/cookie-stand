@@ -1,60 +1,64 @@
 //Hours of Operation on ALL locations
 var hoursOfOperation = ["Location","10am","11am","12pm", "1pm", "2pm","3pm","4pm","5pm"];
 var stores = [];
+console.log(stores);
 var table = document.createElement('table');
 
 function CookieStand(storeLocation, minCustPerHr, maxCustPerHr, aveCookiesPerCust) {
-  this.storeLocation = storeLocation;
-  this.minCustPerHr = minCustPerHr;
-  this.maxCustPerHr = maxCustPerHr;
-  this.aveCookiesPerCust = aveCookiesPerCust;
-  this.hourlyCookies = [0,];
-  this.total = 0;
+this.storeLocation = storeLocation;
+this.minCustPerHr = minCustPerHr;
+this.maxCustPerHr = maxCustPerHr;
+this.aveCookiesPerCust = aveCookiesPerCust;
+this.hourlyCookies = [0,];
+this.total = 0;
+stores.push(this);
 
-  this.calculateRandomHrlyCust = function(){
-    return Math.floor(Math.random()*(this.maxCustPerHr - this.minCustPerHr +1))+this.minCustPerHr;
-    console.log(this.calculateRandomHrlyCust());
-  };
-  this.calculateHourlyTtl = function(){
-    return Math.ceil(this.calculateRandomHrlyCust() * this.aveCookiesPerCust);
-    console.log(this.calculateHourlyTtl());
-  };
-  this.calculateDailyTtl = function(){
-    //var pplist = document.getElementById('pikePlaceList');
-    for (var i = 0; i < hoursOfOperation.length; i++) {
-      this.hourlyCookies.push(this.calculateHourlyTtl());
-      this.total += this.hourlyCookies[i];
-      console.log(this.total);
-      var listItem1 = document.createElement("li");
-      listItem1.innerHTML = hoursOfOperation[i]+ ": " + this.hourlyCookies[i]
-      console.log(listItem1.innerHTML);
-    //  pplist.appendChild(listItem1)
+this.calculateRandomHrlyCust = function(){
+  return Math.floor(Math.random()*(this.maxCustPerHr - this.minCustPerHr +1))+this.minCustPerHr;
+  console.log(this.calculateRandomHrlyCust());
+}
+this.calculateHourlyTtl = function(){
+  return Math.ceil(this.calculateRandomHrlyCust() * this.aveCookiesPerCust);
+  console.log(this.calculateHourlyTtl());
+}
+this.calculateDailyTtl = function(){
+  //var pplist = document.getElementById('pikePlaceList');
+  for (var i = 0; i < hoursOfOperation.length; i++) {
+    this.hourlyCookies.push(this.calculateHourlyTtl());
+    this.total += this.hourlyCookies[i];
+    console.log(this.total);
+    // var listItem1 = document.createElement("li");
+    // listItem1.innerHTML = hoursOfOperation[i]+ ": " + this.hourlyCookies[i]
+    // console.log(listItem1.innerHTML);
+  //  pplist.appendChild(listItem1)
+  }
+  //   //added on Nov 4 8:02am- got Total number attached to the list.
+  //   var listItem1Total = document.createElement("li");
+  //   listItem1Total.innerHTML = "Total: " + pikePlace.total;
+  //   listItem1.appendChild(listItem1Total);
+  //   console.log(listItem1Total);
+};
 
-    };
-    //   //added on Nov 4 8:02am- got Total number attached to the list.
-    //   var listItem1Total = document.createElement("li");
-    //   listItem1Total.innerHTML = "Total: " + pikePlace.total;
-    //   listItem1.appendChild(listItem1Total);
-    //   console.log(listItem1Total);
-  };
-
-  this.tableRows = function() {
-    // Create Store name in first cell
-    var row = document.createElement('tr');
-    table.appendChild(row);
-    var tableData = document.createElement('td');
-    tableData.innerHTML = this.storeLocation;
+this.tableRows = function() {
+  // Create Store name in first cell
+  var row = document.createElement('tr');
+  table.appendChild(row);
+  var tableData = document.createElement('td');
+  tableData.innerHTML = this.storeLocation;
+  row.appendChild(tableData);
+  //Create cookie values in the rest of cells
+  for (var i = 1; i < hoursOfOperation.length; i++) {
+    var tableData = document.createElement('td'); //Creates tableData tag/element
+    tableData.innerHTML = this.hourlyCookies[i]; //Adds the hours to the tag/element
     row.appendChild(tableData);
-    //Create cookie values in the rest of cells
-    for (var i = 1; i < hoursOfOperation.length; i++) {
-      var tableData = document.createElement('td'); //Creates tableData tag/element
-      tableData.innerHTML = this.hourlyCookies[i]; //Adds the hours to the tag/element
-      row.appendChild(tableData);
-    }
-    var tableData = document.createElement('td');
-    tableData.innerHTML = this.total;
-    row.appendChild(tableData);
-  };
+  }
+  var tableData = document.createElement('td');
+  tableData.innerHTML = this.total;
+  row.appendChild(tableData);
+
+};
+
+console.log(this);
 }
 
 var pikePlace = new CookieStand('Pike Place Market', 17, 88, 5.2);
@@ -64,24 +68,23 @@ var bellevueSquare = new CookieStand('Bellevue Square Mall', 20, 48, 3.3);
 var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
 
 displayTable = function() {
-  //Create Table and Header Row
-  // var table = document.createElement('table');
-  console.log(table);
-  var row = document.createElement('tr');
-  row.setAttribute("id", "headerRow"); //Sets an id="headerRow" on the tr tag
-  console.log(row);
-  var header = document.createElement('th');
-  console.log(header);
-  for (var i = 0; i < hoursOfOperation.length; i++) {
-    var header = document.createElement('th'); //Creates header tag/element
-    header.innerHTML = hoursOfOperation[i]; //Adds the hours to the tag/element
-    row.appendChild(header);
-  }
-  var header = document.createElement('th');
-  header.innerHTML = 'Total';
+//Create Table and Header Row
+// var table = document.createElement('table');
+var row = document.createElement('tr');
+row.setAttribute("id", "headerRow"); //Sets an id="headerRow" on the tr tag
+console.log(row);
+var header = document.createElement('th');//<--try to use different var name
+console.log(header);
+for (var i = 0; i < hoursOfOperation.length; i++) {
+  var header = document.createElement('th'); //Creates header tag/element
+  header.innerHTML = hoursOfOperation[i]; //Adds the hours to the tag/element
   row.appendChild(header);
-  table.appendChild(row);
-  document.body.appendChild(table);
+}
+var header = document.createElement('th');
+header.innerHTML = 'Total';
+row.appendChild(header);
+table.appendChild(row);
+document.body.appendChild(table);
 }
 //Calculates each store's cookie count
 pikePlace.calculateDailyTtl();
@@ -99,6 +102,32 @@ southCenterMall.tableRows();
 bellevueSquare.tableRows();
 alki.tableRows();
 
+var FormSubmit = function(event) {
+event.preventDefault();
+ if (!event.target.storeLocation.value || !event.target.minCustPerHr.value || !event.target.maxCustPerHr.value || !event.target.aveCookiesPerCust.value) {
+  return alert('Fields cannot be empty!');
+ }
+ var shop = event.target.storeLocation.value;
+ var min = event.target.minCustPerHr.value;
+ var max = event.target.maxCustPerHr.value;
+ var avg = Number(event.target.aveCookiesPerCust.value);
+
+ var updateInfo = new CookieStand(shop, min, max, avg);
+ stores.push(updateInfo);
+ console.log(updateInfo);
+
+ event.target.storeLocation.value = null;
+ event.target.minCustPerHr.value = null;
+ event.target.maxCustPerHr.value = null;
+ event.target.aveCookiesPerCust.value = null;
+
+ // displayTable();
+ // console.log(displayTable());
+ updateInfo.calculateDailyTtl();
+ updateInfo.tableRows();
+}
+var form = document.getElementById("tableSpace");
+form.addEventListener("submit", FormSubmit);
 // //Pike Place store Hourly Customer, Hourly Cookies TTL, Daily TTL
 // var pikePlace = {
 //   minCustPerHr: 17,

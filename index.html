@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Cookie Stand</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <h1>Salmon Cookie Company</h1>
@@ -12,7 +13,7 @@
 <p>Nobis erat nostrud esse duis lectores. Parum exerci parum qui quod feugiat. Processus ea iis qui qui hendrerit.</p>
 
 <br />
-<!-- <section id="tableSpace"></section> -->
+<form id="tableSpace">
 <fieldset>
   <legend>New Store Location Details:</legend>
   <label>Store Name:<br />
@@ -22,10 +23,10 @@
   <label>Max Customers per Hour:<br />
   <input type="number" name="maxCustPerHr" /></label><br />
   <label>Avg Cookies per Customer:<br />
-  <input type="number" name="aveCookiesPerCust" /></label><br /><br />
-  <input type="submit" name="updateStores" value="Submit Form" />
+  <input type="text" name="aveCookiesPerCust" /></label><br /><br />
+  <button id="updatebutton" type="submit">Submit Form</button>
 </fieldset>
-
+</form>
 
 
 <script src="app.js" type="text/javascript"></script>
