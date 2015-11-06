@@ -1,0 +1,31 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+header {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+figure {
+  float: left;
+  width: 700px;
+}
+figcaption {
+  width: 320px;
+  margin: 0px;
+}
+aside {
+width: 250px;
+float: right;
+}
+.storeinfo {
+text-indent: 35px;
+}
+#storeinfohour{
+  text-indent: 35px;
+
+}
+
+
