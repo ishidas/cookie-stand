@@ -2,7 +2,8 @@ body {
   background-color: #FFBDBD;
 }
 header {
-  background-color: #FFFFFF;
+  background-image: url("img/swirl.png");
+
 }
 
 article {

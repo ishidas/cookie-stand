@@ -10,9 +10,11 @@ header {
 }
 figure {
   float: left;
+  width: 700px;
 }
 figcaption {
-  width: 350px;
+  width: 320px;
+  margin: 0px;
 }
 aside {
 width: 250px;
@@ -25,3 +27,5 @@ text-indent: 35px;
   text-indent: 35px;
 
 }
+
+
