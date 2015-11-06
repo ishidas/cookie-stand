@@ -8,3 +8,20 @@ header {
   margin-right: 0px;
   margin-left: 0px;
 }
+figure {
+  float: left;
+}
+figcaption {
+  width: 350px;
+}
+aside {
+width: 250px;
+float: right;
+}
+.storeinfo {
+text-indent: 35px;
+}
+#storeinfohour{
+  text-indent: 35px;
+
+}
