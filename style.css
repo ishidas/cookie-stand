@@ -3,8 +3,11 @@ body {
 }
 header {
   background-image: url("img/swirl.png");
-
+  height: 200px;
+  z-index: 0;
 }
+
+
 
 article {
   background-color: rgba(255, 255, 255, 0.4);
