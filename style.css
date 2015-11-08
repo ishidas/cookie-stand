@@ -1,14 +1,78 @@
 body {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 18px;
   background-color: #FFBDBD;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 header {
-  background-image: url("img/swirl.png");
-  height: 200px;
+  font-family: 'Architects Daughter', cursive;
+  font: bold;
+  background-image: url("img/river.jpg");
+  height: 400px;
   z-index: 0;
+}
+
+#headerp {
+  display: inline-block;
+  float: center;
+  font-size: 35px;
+  width: 600px;
+  height: 180px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 80px;
 }
 
 
 
 article {
   background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+body {
+  margin:0;
+  font-family:sans-serif;
+  color:#f25252;
+ /* background:#f7f7f7;*/
+}
+.manyfish {
+  font-size:2rem;
+  position:absolute;
+  transform:translate(-50%,-50%);
+  margin:0;
+}
+/*.manyfish:nth-of-type(1){
+  animation: range 3s infinite;
+}*/
+.manyfish:nth-of-type(2){
+  left:50%;
+  top:40%;
+  animation: size 3s infinite;
+}
+/*.manyfish:nth-of-type(3){
+  animation: range2 3s infinite;
+}*/
+@keyframes range {
+  0%  {left:42%;top:40%;font-size:5rem;}
+  25% {left:50%;top:10%;font-size:4rem;}
+  50% {left:58%;top:20%;font-size:6rem;}
+  /*75% {left:50%;top:10%;font-size:3.5rem;}
+  100%{left:42%;top:30%;font-size:6rem;}*/
+}
+/*@keyframes range2 {
+  0%  {left:58%;top:20%;font-size:4rem;}
+  25% {left:50%;top:10%;font-size:4.5rem;}
+  50% {left:42%;top:30%;font-size:5rem;}
+  75% {left:50%;top:20%;font-size:3.5rem;}
+  100%{left:58%;top:30%;font-size:6rem;}
+}*/
+@keyframes size {
+  0%  {font-size:5rem;}
+  25% {font-size:6rem;}
+  50% {font-size:5rem;}
+ /* 75% {font-size:7rem;}
+  100%{font-size:5rem;}*/
 }

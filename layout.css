@@ -10,49 +10,74 @@ header {
   margin-right: 0px;
   margin-left: 0px;
 }
+.changeimg:hover {
+background-image: url(img/individualfish1);
+/*background-image: url(img/swirl.png);*/
+}
 
 .container {
   display: inline-block;
+  float: left;
   width: 200px;
-  margin-top: 30px;
-  margin-left: 50px
+  height: 200px;
+  padding-top: 50px;
+  padding-left: 100px;
+  /*margin-top: 20px;
+  margin-left: 50px;*/
+  z-index: 2;
 }
 
 /**.fishhead {
   float: right;
 }**/
 .fishhead {
-  display: inline-block;
+  position: absolute;
   float: right;
-  width: 660px;
-  margin-left: 5px;
+  width: 710px;
+  margin-left: 0px;
   height: 200px;
-  z-index: 5;
+
+
 }
 
-#headonly {
-  float: right;
-  z-index: 10;
-}
-
-
-#jawonly {
-
-  float: right;
+/*.headonly {*/
+  /*display: inline-block;*/
+/*  position: absolute;
+  margin-right: 0px;
+  margin-left: 0px;
+  border-bottom-left-radius: 40%;
   z-index: 8;
+}*/
 
+/*
+.jawonly:after {*/
+  /*display: inline-block;*/
+/*  position: absolute;
+  left: 200px;
+  margin: 0px;
+  z-index: 10;
+  animation: open .5s linear infinite;
+  animation-play-state: paused;
+}
+.headonly:hover .jawonly:after{
+  animation-play-state: running;
+}
+
+  @keyframes open{
+    50%{transform: rotate(-45deg);}
+}*/
+
+
+.fish {
+  display: inline-block;
+  position: relative;
+  margin-top: 0px;
+  margin-left: 0px;
+  z-index: -1;
 
 }
 
-#fish1 {
-  float: center;
 
-}
-
-#headerp {
-  /**display: inline-block;**/
-  width: 200px;
-}
 
 
 
