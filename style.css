@@ -1,11 +1,3 @@
-body {
-  font-family: 'Architects Daughter', cursive;
-  font-size: 18px;
-  background-color: #FFBDBD;
-  margin-bottom: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
-}
 header {
   font-family: 'Architects Daughter', cursive;
   font: bold;
@@ -17,26 +9,59 @@ header {
 #headerp {
   display: inline-block;
   float: center;
+  background-color: rgba(235, 179, 58, 0.30);
   font-size: 35px;
-  width: 600px;
-  height: 180px;
+  width: 445px;
+  height: 110px;
   margin-top: 20px;
   margin-bottom: 0px;
-  margin-left: 80px;
+  margin-left: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 90%;
+
+}
+
+#logo {
+  padding-left: 23px;
+}
+
+#logotext {
+  padding-left: 23px;
 }
 
 
+h1 {
+  background-color: rgba(235, 179, 58, 0.20);
+  width: 420px;
+  padding-left: 50px;
+  border-radius: 50%;
+}
 
-article {
-  background-color: rgba(255, 255, 255, 0.4);
+article, aside {
+  background-color: rgba(235, 179, 58, 0.20);
 
+}
+
+aside {
+box-shadow: 0 0 8px 8px rgba(235, 179, 58, 1) inset;
+width: 300px;
+float: right;
+height: 410px;
+width: 250px;
+margin-top:20px;
+padding-top: 30px;
+padding-left: 40px;
+border-radius: 10%;
 }
 
 body {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 18px;
   margin:0;
-  font-family:sans-serif;
+  background-color: rgba(160, 176, 199, 1);
   color:#f25252;
- /* background:#f7f7f7;*/
+
 }
 .manyfish {
   font-size:2rem;
@@ -44,35 +69,23 @@ body {
   transform:translate(-50%,-50%);
   margin:0;
 }
-/*.manyfish:nth-of-type(1){
-  animation: range 3s infinite;
-}*/
+
 .manyfish:nth-of-type(2){
-  left:50%;
-  top:40%;
-  animation: size 3s infinite;
+  left:55%;
+  top:65%;
+  animation: size 4s infinite;
 }
-/*.manyfish:nth-of-type(3){
-  animation: range2 3s infinite;
-}*/
+
 @keyframes range {
   0%  {left:42%;top:40%;font-size:5rem;}
   25% {left:50%;top:10%;font-size:4rem;}
   50% {left:58%;top:20%;font-size:6rem;}
-  /*75% {left:50%;top:10%;font-size:3.5rem;}
-  100%{left:42%;top:30%;font-size:6rem;}*/
 }
-/*@keyframes range2 {
-  0%  {left:58%;top:20%;font-size:4rem;}
-  25% {left:50%;top:10%;font-size:4.5rem;}
-  50% {left:42%;top:30%;font-size:5rem;}
-  75% {left:50%;top:20%;font-size:3.5rem;}
-  100%{left:58%;top:30%;font-size:6rem;}
-}*/
+
 @keyframes size {
   0%  {font-size:5rem;}
   25% {font-size:6rem;}
   50% {font-size:5rem;}
- /* 75% {font-size:7rem;}
-  100%{font-size:5rem;}*/
 }
+
+

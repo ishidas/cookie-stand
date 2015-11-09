@@ -1,71 +1,35 @@
 /**Header**/
-body {
+header {
+  box-shadow: 0 0 8px 8px rgba(235, 179, 58, 1) inset;
   margin: 0px;
   padding: 0px;
   position: relative;
 }
 
-header {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
-}
 .changeimg:hover {
 background-image: url(img/individualfish1);
-/*background-image: url(img/swirl.png);*/
+background-image: url(img/swirl.png);
+box-shadow: 0 0 8px 8px rgba(235, 179, 58, 1) inset;
 }
+
 
 .container {
   display: inline-block;
   float: left;
+  background-color: rgba(235, 179, 58, 1);
+  font-size: 15px;
+  font-weight: bold;
+  border: 5px solid #395070;
   width: 200px;
-  height: 200px;
-  padding-top: 50px;
-  padding-left: 100px;
-  /*margin-top: 20px;
-  margin-left: 50px;*/
+  height: 80px;
+  margin: 20px;
+  padding: 20px;
   z-index: 2;
+  border-radius: 90%;
+  -webkit-box-shadow: -9px -16px 9px 1px rgba(0,0,0,0.63);
+  -moz-box-shadow: -9px -16px 9px 1px rgba(0,0,0,0.63);
+  box-shadow: -9px -16px 9px 1px rgba(0,0,0,0.63);
 }
-
-/**.fishhead {
-  float: right;
-}**/
-.fishhead {
-  position: absolute;
-  float: right;
-  width: 710px;
-  margin-left: 0px;
-  height: 200px;
-
-
-}
-
-/*.headonly {*/
-  /*display: inline-block;*/
-/*  position: absolute;
-  margin-right: 0px;
-  margin-left: 0px;
-  border-bottom-left-radius: 40%;
-  z-index: 8;
-}*/
-
-/*
-.jawonly:after {*/
-  /*display: inline-block;*/
-/*  position: absolute;
-  left: 200px;
-  margin: 0px;
-  z-index: 10;
-  animation: open .5s linear infinite;
-  animation-play-state: paused;
-}
-.headonly:hover .jawonly:after{
-  animation-play-state: running;
-}
-
-  @keyframes open{
-    50%{transform: rotate(-45deg);}
-}*/
 
 
 .fish {
@@ -78,21 +42,44 @@ background-image: url(img/individualfish1);
 }
 
 
-
-
-
 figure {
+  background-color: rgba(235, 179, 58, 0.20);
+  box-shadow: 0 0 8px 8px rgba(235, 179, 58, 1) inset;
+  margin-right: 20px;
+  display: inline;
   float: left;
-  width: 700px;
+  width: 870px;
+  border-radius: 5%;
 }
+
+.merch {
+  margin: 20px;
+  -webkit-box-shadow: -9px -16px 9px 1px rgba(0,0,0,0.63);
+  -moz-box-shadow: -9px -16px 9px 1px rgba(0,0,0,0.63);
+  box-shadow: -9px -16px 9px 1px rgba(0,0,0,0.63);
+}
+
 figcaption {
-  width: 320px;
-  margin: 0px;
+  float: right;
+  width: 450px;
+  height: 200px;
+  margin-top: 50px;
+  margin-right: 50px;
+
 }
-aside {
-width: 250px;
-float: right;
+
+#familyphotocap {
+  float: right;
+  width: 350px;
+  height: 200px;
+  margin-top: 30px;
+  margin-right: 50px;
 }
+
+#familyphotohead {
+  margin-top: 0px;
+}
+
 .storeinfo {
 text-indent: 35px;
 }

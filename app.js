@@ -42,6 +42,7 @@ this.calculateDailyTtl = function(){
 this.tableRows = function() {
   // Create Store name in first cell
   var row = document.createElement('tr');
+  row.setAttribute("class", "tableRows");
   table.appendChild(row);
   var tableData = document.createElement('td');
   tableData.innerHTML = this.storeLocation;

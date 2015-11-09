@@ -1,0 +1,8 @@
+* {
+  background-image: url(img/city.jpg);
+  font-family: "Times-New Roman", Georgia, Serif;
+}
+
+script[class=tableRows] {
+  background-color: white;
+}
