@@ -5,31 +5,53 @@
   <link rel="stylesheet" type="text/css" href="layout.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<header>
-  <img src="img/salmon.png" alt="Salmon Logo" />
-  <p>Salmon cookies made with fish, salmon cookies are delish!</p>
-</header>
-<body>
-<h1>Salmon Cookie Company</h1>
-<article>
-<p class="bparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus dignissim commodo. Phasellus facilisis vitae magna eu lacinia. Duis dolor dolor, rutrum a pellentesque accumsan, consectetur ut massa. Morbi rutrum gravida quam sit amet facilisis. Quisque in pharetra neque.</p>
 
-<p class="bparagraph">Humanitatis vel Investigationes duis ad tincidunt. Qui assum et facilisi in nulla. Soluta doming in saepius et quarta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus dignissim commodo. Phasellus facilisis vitae magna eu lacinia. Duis dolor dolor, rutrum a pellentesque accumsan, consectetur ut massa. </p>
+<header class="changeimg">
+<!--Logo container-->
+
+  <div class="container">
+    <img id="logo" src="img/salmon.png" alt="Salmon Logo" />
+    <p id="logotext">Salmon Cookie Company &trade;</p>
+  </div>
+    <p id="headerp">Salmon cookies made with fish, <br /> salmon cookies are delish!</p>
+
+  <div class="manyfish">
+    <img class="fish" src="img/individualfish.png" alt="little salmon cookie1">
+    <img class="fish" src="img/individualfish2.png" alt="little salmon cookies2">
+    <img class="fish" src="img/individualfish3.png" alt="little salmon cookies3">
+    <img class="fish" src="img/individualfish4.png" alt="little salmon cookies4">
+    <img class="fish" src="img/individualfish5.png" alt="little salmon cookies5">
+    <img class="fish" src="img/individualfish6.png" alt="little salmon cookies6">
+
+  </div>
+</header>
+
+<body>
+<h1>Salmon Cookie Company &trade;</h1>
+<article>
+  <p class="bparagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus dignissim commodo. Phasellus facilisis vitae magna eu lacinia. Duis dolor dolor, rutrum a pellentesque accumsan, consectetur ut massa. Morbi rutrum gravida quam sit amet facilisis. Quisque in pharetra neque.</p>
+
+  <p class="bparagraph">Humanitatis vel Investigationes duis ad tincidunt. Qui assum et facilisi in nulla. Soluta doming in saepius et quarta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus dignissim commodo. Phasellus facilisis vitae magna eu lacinia. Duis dolor dolor, rutrum a pellentesque accumsan, consectetur ut massa. </p>
 </article>
 <section id="imagebox-center">
-<figure>
-  <img src="img/fancyFishMED.jpg" alt="salmon cookies photo">
-  <figcaption>Try our delicious Salmon Cookies!</figcaption>
-  <img src="img/fishing_shirts.jpg" alt="fish t-shirt image">
-  <figcaption>Our Salmon Lover's T-Shirts on Sale!</figcaption>
-  <img src="img/familypic.jpg" alt="Family Fun Photo">
-  <figcaption>Everyone needs some natural source of calcium!</figcaption>
-</figure>
+  <figure>
+    <img class="merch" src="img/fancyFishMED.jpg" alt="salmon cookies photo">
+    <figcaption><h3>Try our delicious Salmon Cookies!</h3>
+    <p>We grinded bones and guts of salmon and kneeded into our cookie dough! Flavor is insanely roasty, ad you just can't resist them. Try them for yourself and tell others.</p>
+    </figcaption>
+    <img class="merch" src="img/fishing_shirts.jpg" alt="fish t-shirt image">
+    <figcaption><h3>Our Salmon Lover's T-Shirts on Sale!</h3>
+    <p>Everyone needs a T-shirt! The graphic of the T-shirt is so real that you would be a neck turner on the street! Christmas is almost here, so order online now!</p>
+    </figcaption>
+    <img class="merch" src="img/familypic.jpg" alt="Family Fun Photo">
+    <figcaption id="familyphotocap"><h3 id="familyphotohead">Everyone needs some natural source of calcium!</h3>
+    <p>Bones bones bones! Getting calcium from fish bones is a better way than taking it from suppliments. (this is a biased opinion by the owner of the store, so not a medical advise.)</p>
+    </figcaption>
+  </figure>
 </section>
 
 
-<aside>
-  <section>
+<aside class="sidebar">
   <p class="storeinfo">Store Locations:</p>
   <ul>
     <li>Pike Place Market</li>
@@ -40,10 +62,8 @@
   </ul>
   <p class="storeinfo">House of Operation</p>
   <p id="storeinfohour">5:00pm - 6:00pm daily</p>
-
-  </section>
 </aside>
-<aside>
+<aside class="sidebar">
   <p>Looking to satisfy more of your Salmon craving?! Visit Salmon festivals!</p>
   <ul>
     <li><a href="http://www.salmondays.org/">Issaguah Salmon Days Festival</a></li>

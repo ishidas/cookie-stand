@@ -3,20 +3,24 @@
 
 <head>
   <title>Salmon Cookie Company Sales Data</title>
+  <link rel="stylesheet" type="text/css" href="salesstyle.css">
 </head>
+<header>
+  <h2>Salmon Cookie Company Sales Data</h2>
 
+</header>
 <body>
 <form id="tableSpace">
 <fieldset>
   <legend>New Store Location Details:</legend>
   <label>Store Name:<br />
-  <input type="text" name="storeLocation" /></label><br />
+  <input class="boxes" type="text" name="storeLocation" /></label><br />
   <label>Min Customers per Hour:<br />
-  <input type="number" name="minCustPerHr" /></label><br />
+  <input class="boxes" type="number" name="minCustPerHr" /></label><br />
   <label>Max Customers per Hour:<br />
-  <input type="number" name="maxCustPerHr" /></label><br />
+  <input class="boxes" type="number" name="maxCustPerHr" /></label><br />
   <label>Avg Cookies per Customer:<br />
-  <input type="text" name="aveCookiesPerCust" /></label><br /><br />
+  <input class="boxes" type="text" name="aveCookiesPerCust" /></label><br /><br />
   <button id="updatebutton" type="submit">Submit Form</button>
 </fieldset>
 </form>
